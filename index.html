@@ -3,13 +3,17 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Lic. Christian Martínez Leyva – Psicólogo Clínico | Hermosillo, Sonora</title>
-
+  
   <link rel="shortcut icon" type="image/x-icon" href="img/LogotipoFONDO.ico" />
 
   <meta name="description"
     content="Psicoterapia clínica para adultos, jóvenes y parejas en Hermosillo, Sonora. Especialista en ansiedad, depresión, duelo, estrés y crisis. Lic. Christian Martínez Leyva." />
+  
+  <meta name="theme-color" content="#0A1A3A" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,8 +23,19 @@
 
   <link rel="stylesheet" href="css/styles.css" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-</head>
-
+  
+  <style>
+    @supports (padding: max(0px)) {
+      body {
+        padding-left: max(0px, env(safe-area-inset-left));
+        padding-right: max(0px, env(safe-area-inset-right));
+      }
+      nav {
+        padding-left: max(1.1rem, calc(1.1rem + env(safe-area-inset-left)));
+        padding-right: max(1.1rem, calc(1.1rem + env(safe-area-inset-right)));
+      }
+    }
+  </style>
 <body>
 
   <nav id="navbar">
