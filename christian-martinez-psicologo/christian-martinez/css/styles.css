@@ -90,7 +90,11 @@ nav {
   color: var(--cream);
   text-decoration: none;
   line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
+
 .nav-logo span {
   display: block;
   font-size: 0.65rem;
@@ -263,12 +267,15 @@ nav {
 }
 .photo-frame img {
   width: 100%;
+  height: auto;
   aspect-ratio: 3/4;
   object-fit: cover;
   border-radius: 2px;
   position: relative;
   z-index: 1;
   filter: none;
+  image-rendering: auto;
+  -webkit-image-rendering: auto;
 }
 
 .photo-placeholder {
@@ -439,6 +446,12 @@ nav {
   display: block;
   color: rgba(200,169,110,0.7);
   transition: color 0.25s;
+}
+ .service-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: rgba(200,169,110,0.7);
+  stroke-width: 1.5;
 }
 .service-card h3 {
   font-family: var(--r);
@@ -672,6 +685,9 @@ footer {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--cream);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 .footer-brand span {
   display: block;

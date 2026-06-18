@@ -17,13 +17,16 @@
 
   <!-- Estilos -->
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 
 <body>
 
-    <!-- NAV -->
+  <!-- NAV -->
   <nav id="navbar">
     <a href="#hero" class="nav-logo">
+      <img src="img/LogotipoVertical.png" alt="Logo Christian Martínez Leyva"
+        style="height: 68px; width: auto; mix-blend-mode: screen;" />
       Christian Martínez Leyva
       <span>Psicólogo Clínico · Hermosillo, Son.</span>
     </a>
@@ -109,12 +112,16 @@
         <h2>Un psicólogo comprometido con tu bienestar real</h2>
         <div class="divider"></div>
         <p>
-          Soy el <strong>Lic. Christian Martínez Leyva</strong>, Psicólogo Clínico enfocado en el acompañamiento psicoterapéutico para adultos, jóvenes y parejas.
-           Mi práctica nace de entender que la vida a veces nos introduce en laberintos emocionales complejos, pero también de la firme convicción de que todos tenemos la capacidad de trazar nuevas rutas hacia la estabilidad.
+          Soy el <strong>Lic. Christian Martínez Leyva</strong>, Psicólogo Clínico enfocado en el acompañamiento
+          psicoterapéutico para adultos, jóvenes y parejas.
+          Mi práctica nace de entender que la vida a veces nos introduce en laberintos emocionales complejos, pero
+          también de la firme convicción de que todos tenemos la capacidad de trazar nuevas rutas hacia la estabilidad.
         </p>
         <p>
-         Trabajo desde un enfoque profundamente humano, clínico, científico y libre de juicios. En mi espacio, no encontrarás fórmulas genéricas; aquí colaboramos en equipo para comprender tu historia, procesar tus emociones y desarrollar herramientas prácticas que te devuelvan el control de tu vida. 
-         Mi objetivo es guiarte para que logres transitar las crisis y reconfigurar tu bienestar integral.
+          Trabajo desde un enfoque profundamente humano, clínico, científico y libre de juicios. En mi espacio, no
+          encontrarás fórmulas genéricas; aquí colaboramos en equipo para comprender tu historia, procesar tus emociones
+          y desarrollar herramientas prácticas que te devuelvan el control de tu vida.
+          Mi objetivo es guiarte para que logres transitar las crisis y reconfigurar tu bienestar integral.
         </p>
         <ul class="credential-list">
           <li>Licenciado en Psicología Clínica</li>
@@ -139,7 +146,7 @@
   </section>
 
 
-    <!-- SERVICES -->
+  <!-- SERVICES -->
   <section id="services">
 
     <div class="services-header reveal">
@@ -151,42 +158,42 @@
     <div class="services-grid">
 
       <div class="service-card reveal">
-        <span class="service-icon"></span>
+        <span class="service-icon"><i data-lucide="brain"></i></span> 
         <h3>Ansiedad y Estrés</h3>
         <p>Identificamos juntos los patrones que alimentan tu ansiedad y construimos estrategias de regulación emocional
           efectivas para tu vida cotidiana.</p>
       </div>
 
       <div class="service-card reveal">
-        <span class="service-icon"></span>
+        <span class="service-icon"><i data-lucide="heart"></i></span>
         <h3>Depresión</h3>
         <p>Acompañamiento clínico en los momentos de mayor oscuridad, ayudándote a recuperar energía, sentido y
           motivación paso a paso.</p>
       </div>
 
       <div class="service-card reveal">
-        <span class="service-icon"></span>
+        <span class="service-icon"><i data-lucide="feather"></i></span> 
         <h3>Procesos de Duelo</h3>
         <p>El duelo toma muchas formas. Te acompaño a transitar las distintas etapas con comprensión, sin apresurar el
           proceso natural del dolor.</p>
       </div>
 
       <div class="service-card reveal">
-        <span class="service-icon"></span>
+        <span class="service-icon"><i data-lucide="zap"></i></span>  
         <h3>Intervención en Crisis</h3>
         <p>Atención enfocada cuando estás en un punto de quiebre. Trabajamos en contención inmediata y en los pasos
           concretos para salir de la crisis.</p>
       </div>
 
       <div class="service-card reveal">
-        <span class="service-icon"></span>
+        <span class="service-icon"><i data-lucide="message-circle"></i></span>
         <h3>Terapia de Pareja</h3>
         <p>Facilitación de la comunicación, resolución de conflictos y reconstrucción del vínculo afectivo para parejas
           en momentos de tensión o transformación.</p>
       </div>
 
       <div class="service-card reveal">
-        <span class="service-icon"></span>
+        <span class="service-icon"><i data-lucide="sun"></i></span>  
         <h3>Bienestar Emocional</h3>
         <p>Trabajo de fondo para reconfigurar creencias, hábitos y respuestas emocionales que ya no te sirven,
           construyendo una vida más plena y congruente.</p>
@@ -196,7 +203,7 @@
   </section>
 
 
-    <!-- APPROACH -->
+  <!-- APPROACH -->
   <section id="approach">
     <div class="approach-grid">
 
@@ -250,7 +257,7 @@
   </section>
 
 
-    <!-- CONTACT -->
+  <!-- CONTACT -->
   <section id="contact">
 
     <svg class="labyrinth-bg" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -362,21 +369,23 @@
             placeholder="Cuéntame brevemente qué te gustaría trabajar..."></textarea>
         </div>
 
-        <button class="btn-submit" type="button">Enviar solicitud</button>
+        <button class="btn-submit" type="button" id="btnEnviarWhatsapp">Enviar solicitud</button>
       </div>
 
     </div>
   </section>
 
 
-    <!-- FOOTER -->
-  <footer>
-    <div class="footer-brand">
-      Christian Martínez Leyva
-      <span>Psicólogo Clínico · Hermosillo, Sonora</span>
-    </div>
-    <p>© 2025 · Todos los derechos reservados · Servicio confidencial y profesional</p>
-  </footer>
+  <!-- FOOTER -->
+ <footer>
+  <div class="footer-brand">
+    <img src="img/LogotipoVertical.png" alt="Logo Christian Martínez Leyva"
+      style="height: 72px; width: auto; object-fit: cover; object-position: center; mix-blend-mode: screen;" />
+    Christian Martínez Leyva
+    <span>Psicólogo Clínico · Hermosillo, Sonora</span>
+  </div>
+  <p>© 2025 · Todos los derechos reservados · Servicio confidencial y profesional</p>
+</footer>
 
 
   <!-- Scripts -->
