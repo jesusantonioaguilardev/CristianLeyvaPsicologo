@@ -721,9 +721,7 @@ nav.scrolled {
 
 .video-block {
   max-width: var(--max);
-  margin: 0 auto 3rem;
-  display: grid;
-  gap: 1rem;
+  margin: 2rem auto 3rem;
   align-items: center;
 }
 
