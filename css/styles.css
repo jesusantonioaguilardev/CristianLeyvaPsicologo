@@ -214,6 +214,18 @@ nav.scrolled {
   margin-bottom: 1.5rem;
 }
 
+.hero-kicker {
+  display: block;
+  font-family: var(--s);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
 .hero-tagline em {
   display: block;
   font-style: inherit;
@@ -952,6 +964,17 @@ footer {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.55);
   margin-top: 2px;
+}
+
+.footer-nap {
+  width: 100%;
+  font-style: normal;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-nap a {
+  color: inherit;
 }
 
 footer p {
