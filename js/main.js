@@ -54,9 +54,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   lucide.createIcons();
 
+  document.getElementById('year').textContent = new Date().getFullYear();
+
   const btnEnviar = document.getElementById('btnEnviarWhatsapp');
+  const formError = document.getElementById('formError');
+
+  const showError = (msg) => {
+    formError.textContent = msg;
+    formError.hidden = false;
+  };
 
   btnEnviar.addEventListener('click', function () {
+    formError.hidden = true;
+
     const nombre   = document.getElementById('nombre').value.trim();
     const apellido = document.getElementById('apellido').value.trim();
     const email    = document.getElementById('email').value.trim();
@@ -65,16 +75,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const mensaje  = document.getElementById('mensaje').value.trim();
 
     if (!nombre || !apellido || !email || !telefono || !motivo) {
-      alert('Por favor, completa todos los campos obligatorios antes de enviar.');
+      showError('Por favor, completa todos los campos obligatorios antes de enviar.');
       return;
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      alert('Por favor, ingresa un correo válido.');
+      showError('Por favor, ingresa un correo válido.');
       return;
     }
 
-    const miTelefonoWA = "526621448882";
+    const miTelefonoWA = "526623800030";
 
     let cuerpo = `*Nueva solicitud de consulta*\n\n`;
     cuerpo += `*Nombre:* ${nombre} ${apellido}\n`;

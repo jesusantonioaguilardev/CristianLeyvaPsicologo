@@ -805,6 +805,18 @@ nav.scrolled {
   line-height: 1.6;
 }
 
+.contact-item-text a {
+  color: var(--pine);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.form-error {
+  color: #a33a2c;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
 .contact-item-text strong {
   display: block;
   font-size: 0.72rem;
@@ -1188,6 +1200,10 @@ footer p {
 
   .nav-logo {
     font-size: 0.9rem;
+  }
+
+  .nav-logo span {
+    display: none;
   }
 
   .nav-logo img {
