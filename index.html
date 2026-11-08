@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://psicologochristianmartinez.com/">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Christian Martínez Leyva – Rediseño</title>
+<meta name="description" content="Psicólogo clínico en Hermosillo, Sonora, con más de 20 años de experiencia en adicciones, ansiedad, depresión, duelo, crisis emocionales y orientación familiar. Lic. Christian Martínez Leyva.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {"@type": "Person", "@id": "https://psicologochristianmartinez.com/#persona", "name": "Christian Martínez Leyva", "honorificPrefix": "Lic.",
+     "alternateName": ["Lic. Christian Martínez Leyva", "Christian Martinez Leyva", "Cristian Martínez Leyva", "Christian Leyva", "Psicólogo Christian Martínez"],
+     "jobTitle": "Psicólogo clínico", "telephone": "+52 662 380 0030", "email": "licmartinezleyva@gmail.com",
+     "address": {"@type": "PostalAddress", "addressLocality": "Hermosillo", "addressRegion": "Sonora", "addressCountry": "MX"}},
+    {"@type": "Psychologist", "@id": "https://psicologochristianmartinez.com/#consultorio", "name": "Christian Martínez Leyva – Psicólogo Clínico en Hermosillo",
+     "url": "https://psicologochristianmartinez.com/", "telephone": "+52 662 380 0030", "founder": {"@id": "https://psicologochristianmartinez.com/#persona"},
+     "address": {"@type": "PostalAddress", "addressLocality": "Hermosillo", "addressRegion": "Sonora", "addressCountry": "MX"}}
+  ]
+}
+</script>
+
+<style>
+/* Layout: editorial de consultorio — menú partido con el nombre al centro, portada a todo lo ancho,
+   bandas de color alternadas (arena, salvia, pino) y el laberinto del logotipo como único motivo gráfico. */
+:root {
+  --pine: #2C3E35;        /* verde pino de la marca: texto principal y banda oscura */
+  --pine-deep: #1f2d26;   /* barra superior y pie */
+  --sage: #4a7c6e;        /* acento de la marca */
+  --sage-band: #dde7e1;   /* banda clara, equivalente a la banda rosa de la referencia */
+  --sand: #f4f7f5;        /* fondo de la marca */
+  --paper: #fbfcfb;
+  --ink: #1d2621;
+  --muted: #5b6a62;
+  --rule: rgba(44, 62, 53, 0.18);
+  --on-dark: #eef3f0;
+  --on-dark-muted: rgba(238, 243, 240, 0.68);
+
+  --display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --body: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --gutter: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+  --wrap: 1180px;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--pine-deep);
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+:focus-visible { outline: 2px solid var(--sage); outline-offset: 3px; }
+
+.band { padding-left: var(--gutter); padding-right: var(--gutter-r); }
+.inner { max-width: var(--wrap); margin: 0 auto; }
+.label {
+  font-family: var(--body); font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.24em; text-transform: uppercase; color: var(--sage);
+}
+
+/* ---------- Barra de anuncios ---------- */
+.ticker {
+  background: var(--pine-deep); color: var(--on-dark);
+  font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
+  overflow: hidden; white-space: nowrap;
+}
+.ticker-track { display: inline-flex; gap: 3rem; padding-block: 0.6rem; animation: ticker 38s linear infinite; }
+.ticker-track span::after { content: "◆"; margin-left: 3rem; font-size: 0.5rem; vertical-align: middle; color: var(--sage); }
+@keyframes ticker { to { transform: translateX(-50%); } }
+
+/* ---------- Menú ---------- */
+.nav {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
+  background: rgba(251, 252, 251, 0.96); backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+.nav .inner {
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+  gap: 1.5rem; padding-block: 0.9rem;
+}
+.nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.6rem; }
+.nav ul.right { justify-content: flex-end; align-items: center; }
+.nav ul a {
+  text-decoration: none; font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--pine);
+}
+.nav ul a:hover { color: var(--sage); }
+.wordmark { text-decoration: none; text-align: center; color: var(--pine); line-height: 1.1; }
+.wordmark strong {
+  display: block; font-family: var(--display); font-weight: 500;
+  font-size: 1.35rem; letter-spacing: 0.16em; text-transform: uppercase;
+}
+.wordmark small { font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--sage); }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  background: var(--pine); color: var(--on-dark) !important; text-decoration: none;
+  font-family: var(--body); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 0.85rem 1.3rem; border: 1px solid var(--pine); cursor: pointer; transition: background .2s;
+}
+.btn:hover { background: var(--sage); border-color: var(--sage); }
+.btn.ghost { background: transparent; color: var(--pine) !important; }
+.btn.ghost:hover { background: var(--pine); color: var(--on-dark) !important; }
+.menu-btn { display: none; background: none; border: 0; padding: 0.4rem; cursor: pointer; color: var(--pine); justify-self: end; }
+.menu-btn svg { width: 26px; height: 26px; }
+.nav .mobile-menu { display: none; }
+
+/* ---------- Portada ---------- */
+.hero { display: grid; grid-template-columns: 1.05fr 1fr; background: var(--pine); }
+.hero figure { margin: 0; position: relative; height: clamp(440px, 62vw, 680px); overflow: hidden; }
+.hero img { width: 100%; height: 100%; object-fit: cover; }
+.hero .left img { object-position: 50% 18%; }
+.hero .right img { object-position: 50% 30%; }
+.hero figcaption {
+  position: absolute; inset: auto 0 0 0;
+  padding: 6rem clamp(1.25rem, 4vw, 3rem) clamp(1.5rem, 4vw, 2.75rem);
+  background: linear-gradient(to top, rgba(20, 30, 25, 0.9), rgba(20, 30, 25, 0));
+  color: var(--on-dark); display: grid; gap: 0.75rem; max-width: 34rem;
+}
+.hero h1 {
+  font-size: clamp(1.7rem, 3.2vw, 2.6rem); letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; line-height: 1.15;
+}
+.hero figcaption p { font-size: 0.95rem; color: var(--on-dark-muted); max-width: 30rem; }
+
+/* ---------- Declaración ---------- */
+.statement { background: var(--sage-band); text-align: center; padding-block: clamp(3.5rem, 8vw, 6rem); position: relative; overflow: hidden; }
+.statement .inner { max-width: 860px; display: grid; gap: 1.5rem; justify-items: center; position: relative; }
+.statement blockquote {
+  margin: 0; font-family: var(--display); font-weight: 400;
+  font-size: clamp(1.6rem, 3.4vw, 2.5rem); line-height: 1.3; color: var(--pine); text-wrap: balance;
+}
+.statement blockquote em { font-style: italic; color: var(--sage); }
+.statement cite { font-style: normal; font-size: 0.7rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--pine); }
+.maze { position: absolute; width: 520px; max-width: none; opacity: 0.07; pointer-events: none; }
+.statement .maze { right: -160px; top: -120px; }
+
+/* ---------- Perfil ---------- */
+.profile { padding-block: clamp(4rem, 9vw, 7rem); }
+.profile .inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+.profile figure { margin: 0; position: sticky; top: 6.5rem; }
+.profile figure img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.profile figcaption { font-size: 0.75rem; color: var(--muted); margin-top: 0.75rem; letter-spacing: 0.04em; }
+.profile .text { display: grid; gap: 1.4rem; max-width: 40rem; min-width: 0; }
+.profile h2 { font-size: clamp(1.5rem, 2.6vw, 2.1rem); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; color: var(--pine); line-height: 1.25; }
+.profile .name { font-family: var(--display); font-size: 1.3rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); }
+.profile p { color: #34413a; }
+.profile h3 { font-size: 1.6rem; color: var(--pine); margin-top: 0.75rem; }
+.creds { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.creds li { padding: 0.8rem 0; border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; font-size: 0.95rem; }
+.creds li b { font-weight: 500; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); padding-top: 0.2rem; }
+.pending {
+  border: 1px dashed var(--sage); background: var(--sand); padding: 1rem 1.2rem; font-size: 0.85rem; color: var(--muted);
+}
+.pending strong { color: var(--pine); font-weight: 600; }
+
+/* ---------- Áreas de atención ---------- */
+.areas { background: var(--sand); padding-block: clamp(4rem, 9vw, 7rem); }
+.section-head { display: grid; gap: 0.9rem; max-width: 46rem; margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }
+.section-head h2 { font-size: clamp(2rem, 4vw, 3.1rem); color: var(--pine); line-height: 1.12; }
+.section-head p { color: var(--muted); }
+.area-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(2rem, 6vw, 5rem); border-top: 1px solid var(--rule); }
+.area { padding: 1.6rem 0; border-bottom: 1px solid var(--rule); display: grid; gap: 0.5rem; }
+.area h3 { font-size: 1.55rem; color: var(--pine); }
+.area p { color: #3f4c45; font-size: 0.95rem; }
+.area .tags { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage); }
+
+/* ---------- Proceso (banda oscura) ---------- */
+.process { background: var(--pine); color: var(--on-dark); padding-block: clamp(4rem, 9vw, 7rem); position: relative; overflow: hidden; }
+.process .label { color: #9fc2b5; }
+.process .section-head h2 { color: var(--on-dark); }
+.process .section-head p { color: var(--on-dark-muted); }
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 4vw, 3rem); counter-reset: step; }
+.step { border-top: 1px solid rgba(238, 243, 240, 0.25); padding-top: 1.4rem; display: grid; gap: 0.7rem; align-content: start; }
+.step::before {
+  counter-increment: step; content: "Paso " counter(step);
+  font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: #9fc2b5;
+}
+.step h3 { font-size: 1.6rem; }
+.step p { color: var(--on-dark-muted); font-size: 0.95rem; }
+.process .maze { left: -180px; bottom: -200px; opacity: 0.06; filter: invert(1); }
+
+/* ---------- Grupo Los Altos ---------- */
+.group { background: var(--sage-band); padding-block: clamp(4rem, 9vw, 7rem); }
+.group-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 2.5rem); }
+.org { background: var(--paper); padding: clamp(1.4rem, 3vw, 2rem); display: grid; gap: 0.8rem; align-content: start; }
+.org h3 { font-size: 1.6rem; color: var(--pine); }
+.org p { font-size: 0.93rem; color: #3f4c45; }
+.org a.more { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sage); text-decoration: none; border-bottom: 1px solid currentColor; justify-self: start; padding-bottom: 2px; }
+.penasco { margin-top: clamp(1.5rem, 3vw, 2.5rem); display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: center; border-top: 1px solid var(--rule); padding-top: clamp(1.5rem, 3vw, 2.5rem); }
+.penasco h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--pine); }
+.penasco p { color: #3f4c45; font-size: 0.95rem; }
+.penasco .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+/* ---------- Opiniones ---------- */
+.reviews { padding-block: clamp(3.5rem, 7vw, 5rem); text-align: center; }
+.reviews .inner { display: grid; gap: 1rem; justify-items: center; max-width: 720px; }
+.reviews h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: var(--pine); }
+
+/* ---------- Preguntas frecuentes ---------- */
+.faq { background: var(--sand); padding-block: clamp(4rem, 9vw, 7rem); }
+.faq .inner { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+.faq .intro { position: sticky; top: 6.5rem; display: grid; gap: 1rem; }
+.faq .intro h2 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); color: var(--pine); line-height: 1.05; }
+.faq .intro p { color: var(--muted); }
+.faq-list { display: grid; gap: 0.75rem; min-width: 0; }
+.faq details { border: 1px solid var(--pine); background: var(--paper); }
+.faq summary {
+  list-style: none; cursor: pointer; padding: 1.1rem 1.25rem; display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: center;
+  font-family: var(--display); font-size: 1.35rem; color: var(--pine); line-height: 1.25;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: var(--body); font-weight: 300; font-size: 1.6rem; line-height: 1; transition: transform .2s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 1.25rem 1.25rem; color: #3f4c45; font-size: 0.95rem; }
+
+/* ---------- Contacto ---------- */
+.contact { padding-block: clamp(4rem, 9vw, 7rem); }
+.contact .inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(2rem, 6vw, 5rem); }
+.contact h2 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); color: var(--pine); line-height: 1.05; }
+.contact .info { display: grid; gap: 1.5rem; align-content: start; }
+.contact dl { margin: 0; display: grid; gap: 1.1rem; border-top: 1px solid var(--rule); padding-top: 1.4rem; }
+.contact dt { font-size: 0.66rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--sage); font-weight: 600; }
+.contact dd { margin: 0.15rem 0 0; font-size: 1rem; color: var(--pine); user-select: all; }
+.contact dd.plain { user-select: auto; }
+form { background: var(--sand); padding: clamp(1.4rem, 4vw, 2.5rem); display: grid; gap: 1rem; }
+form h3 { font-size: 1.7rem; color: var(--pine); }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.field { display: grid; gap: 0.35rem; min-width: 0; }
+.field label { font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--pine); font-weight: 600; }
+.field input, .field select, .field textarea {
+  font: inherit; font-size: 0.95rem; color: var(--ink); background: var(--paper);
+  border: 1px solid var(--rule); padding: 0.75rem 0.85rem; border-radius: 0; width: 100%;
+}
+.field textarea { min-height: 96px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--sage); }
+.form-note { font-size: 0.8rem; color: var(--muted); }
+.form-error { font-size: 0.85rem; color: #9b3426; }
+
+/* ---------- Pie ---------- */
+footer { background: var(--pine-deep); color: var(--on-dark-muted); padding-block: 3rem calc(5.5rem + env(safe-area-inset-bottom, 0px)); }
+footer .inner { display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: center; }
+footer img { height: 70px; width: auto; filter: brightness(0) invert(1); opacity: 0.9; }
+footer address { font-style: normal; font-size: 0.82rem; line-height: 1.8; }
+footer address strong { color: var(--on-dark); font-weight: 500; }
+
+/* ---------- Barra fija para agendar ---------- */
+.book-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+  background: var(--pine-deep); display: grid; grid-template-columns: 1fr 1fr;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px);
+}
+.book-bar a {
+  text-align: center; padding: 1rem; color: var(--on-dark); text-decoration: none;
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+}
+.book-bar a + a { border-left: 1px solid rgba(238, 243, 240, 0.2); }
+.book-bar a:hover { background: var(--pine); }
+
+/* ---------- Animación de entrada (visible por defecto) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .hero figcaption > * { animation: rise .9s ease both; }
+  .hero figcaption > *:nth-child(2) { animation-delay: .12s; }
+  .hero figcaption > *:nth-child(3) { animation-delay: .24s; }
+  @keyframes rise { from { transform: translateY(14px); opacity: .001; } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 1120px) {
+  .nav ul { display: none; }
+  .nav .inner { grid-template-columns: 40px 1fr 40px; }
+  .menu-btn { display: block; }
+  .nav .mobile-menu { display: grid; gap: 0; border-top: 1px solid var(--rule); padding-block: 0.5rem 1rem; }
+  .nav .mobile-menu[hidden] { display: none; }
+  .mobile-menu a { text-decoration: none; padding: 0.8rem 0; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--pine); border-bottom: 1px solid var(--rule); }
+  .group-grid { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; }
+  .penasco { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero .right { display: none; }
+  .hero figure { height: clamp(460px, 120vw, 600px); }
+  .profile .inner, .faq .inner, .contact .inner { grid-template-columns: 1fr; }
+  .profile figure, .faq .intro { position: static; }
+  .profile figure img { aspect-ratio: 4 / 3; object-position: 50% 25%; }
+  .area-list { grid-template-columns: 1fr; }
+  .row { grid-template-columns: 1fr; }
+  .creds li { grid-template-columns: 1fr; gap: 0.2rem; }
+  footer .inner { grid-template-columns: 1fr; }
+  .wordmark strong { font-size: 1.05rem; letter-spacing: 0.12em; }
+}
+</style>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Más de 20 años de experiencia clínica</span>
+    <span>Consulta presencial en Hermosillo, Sonora</span>
+    <span>Especialista en salud mental y adicciones</span>
+    <span>Fundador de Grupo Los Altos</span>
+    <span>Valoración inicial previa cita</span>
+    <span>Más de 20 años de experiencia clínica</span>
+    <span>Consulta presencial en Hermosillo, Sonora</span>
+    <span>Especialista en salud mental y adicciones</span>
+    <span>Fundador de Grupo Los Altos</span>
+    <span>Valoración inicial previa cita</span>
+  </div>
+</div>
+
+<nav class="nav band" aria-label="Principal">
+  <div class="inner">
+    <ul>
+      <li><a href="#perfil">Sobre mí</a></li>
+      <li><a href="#atencion">Atención</a></li>
+      <li><a href="#grupo">Grupo Los Altos</a></li>
+    </ul>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+    <a class="wordmark" href="#inicio">
+      <strong>Christian Martínez Leyva</strong>
+      <small>Psicólogo clínico · Hermosillo</small>
+    </a>
+    <ul class="right">
+      <li><a href="#proceso">Proceso</a></li>
+      <li><a href="#preguntas">Preguntas</a></li>
+      <li><a class="btn" href="#contacto">Agendar valoración</a></li>
+    </ul>
+  </div>
+  <div class="inner mobile-menu" id="mobileMenu" hidden>
+    <a href="#perfil">Sobre mí</a>
+    <a href="#atencion">Atención</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#grupo">Grupo Los Altos</a>
+    <a href="#preguntas">Preguntas</a>
+    <a href="#contacto">Agendar valoración</a>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <figure class="left">
+    <img src="img/christian-martinez.jpg" width="800" height="1200" alt="Lic. Christian Martínez Leyva, psicólogo clínico en Hermosillo, Sonora">
+    <figcaption>
+      <span class="label" style="color:#9fc2b5">Psicólogo clínico en Hermosillo</span>
+      <h1>Salud mental y adicciones</h1>
+      <p>El Lic. Christian Martínez Leyva acompaña a personas y familias con más de 20 años de experiencia en psicoterapia clínica, tratamiento de adicciones e intervención en crisis.</p>
+    </figcaption>
+  </figure>
+  <figure class="right">
+    <img src="img/ChristianNueva.jpeg" width="798" height="1200" alt="Christian Martínez Leyva en su consultorio de Hermosillo" loading="lazy">
+  </figure>
+</header>
+
+<section class="statement band" aria-label="Enfoque">
+  <svg class="maze" viewBox="0 0 800 800" fill="none" aria-hidden="true"><g stroke="#2C3E35" stroke-width="3"><rect x="50" y="50" width="700" height="700"/><rect x="130" y="130" width="540" height="540"/><rect x="210" y="210" width="380" height="380"/><rect x="290" y="290" width="220" height="220"/><rect x="370" y="370" width="60" height="60"/><path d="M400 50v80M400 210v80M670 400h80M510 400h80M400 590v80M50 400h80M210 400h80"/></g></svg>
+  <div class="inner">
+    <span class="label">Psicólogo clínico · Salud mental · Adicciones</span>
+    <blockquote>Atención psicológica profesional, humana y basada en evidencia, para <em>comprender lo que estás viviendo</em> y recuperar estabilidad, funcionalidad y calidad de vida.</blockquote>
+    <cite>Lic. Christian Martínez Leyva</cite>
+  </div>
+</section>
+
+<section class="profile band" id="perfil">
+  <div class="inner">
+    <figure>
+      <img src="img/ChristianLeyvaTraje.jpeg" width="470" height="470" alt="Retrato del Lic. Christian Martínez Leyva" loading="lazy">
+      <figcaption>Consulta presencial en Hermosillo, Sonora · Lunes a viernes, previa cita</figcaption>
+    </figure>
+    <div class="text">
+      <h2>Psicólogo clínico, especialista en salud mental y adicciones, y fundador de Grupo Los Altos</h2>
+      <p class="name">Lic. Christian Martínez Leyva</p>
+      <p>Christian Martínez Leyva es psicólogo clínico con más de 20 años de experiencia en la evaluación y el tratamiento de problemas de salud mental, trastornos por consumo de sustancias y conductas adictivas.</p>
+      <p>A lo largo de su trayectoria ha acompañado a personas y familias que enfrentan condiciones complejas, así como problemas frecuentes de ansiedad, depresión, estrés, duelo, impulsividad y dificultades familiares. Su práctica integra herramientas clínicas basadas en evidencia y psicoterapia cognitivo-conductual, y cuando el caso lo requiere colabora con médicos, psiquiatras y otros profesionales de la salud.</p>
+
+      <h3>Formación y trayectoria</h3>
+      <ul class="creds">
+        <li><b>Experiencia</b><span>Más de 20 años en psicoterapia clínica</span></li>
+        <li><b>Enfoque</b><span>Psicoterapia cognitivo-conductual y herramientas basadas en evidencia</span></li>
+        <li><b>Especialidad</b><span>Adicciones, prevención de recaídas e intervención en crisis</span></li>
+        <li><b>Atención</b><span>Adultos, adolescentes y familias</span></li>
+        <li><b>Fundador</b><span>Grupo Los Altos: Clínica Los Altos, Centro Médico Los Altos y Sonora TMS Center</span></li>
+      </ul>
+      <p class="pending"><strong>Por completar con el Lic. Martínez:</strong> universidad, número de cédula profesional, posgrados y certificaciones. En la referencia esta lista es lo que más confianza genera, y Google la valora en temas de salud.</p>
+    </div>
+  </div>
+</section>
+
+<section class="areas band" id="atencion">
+  <div class="inner">
+    <div class="section-head">
+      <span class="label">Áreas de atención</span>
+      <h2>Atención psicológica con enfoque clínico y personalizado</h2>
+      <p>Cada proceso comienza con una valoración clínica y se adapta a las necesidades, objetivos y circunstancias de la persona.</p>
+    </div>
+    <div class="area-list">
+      <article class="area">
+        <h3>Adicciones y conductas compulsivas</h3>
+        <p>Atención especializada para consumo problemático de sustancias, conductas compulsivas y prevención de recaídas, con acompañamiento familiar.</p>
+        <span class="tags">Alcohol · Sustancias · Recaídas</span>
+      </article>
+      <article class="area">
+        <h3>Valoración y consulta psicológica</h3>
+        <p>La valoración inicial permite comprender el motivo de consulta, revisar antecedentes relevantes e identificar prioridades.</p>
+        <span class="tags">Primera cita · Diagnóstico clínico</span>
+      </article>
+      <article class="area">
+        <h3>Psicoterapia individual</h3>
+        <p>Un espacio profesional y confidencial para trabajar emociones, pensamientos, conductas y situaciones personales que afectan el bienestar.</p>
+        <span class="tags">Ansiedad · Depresión · Duelo · Estrés</span>
+      </article>
+      <article class="area">
+        <h3>Intervención en crisis emocionales</h3>
+        <p>Atención ante crisis de ansiedad, conflictos familiares, recaídas, pérdidas importantes o situaciones que requieren contención profesional.</p>
+        <span class="tags">Contención · Estabilización</span>
+      </article>
+      <article class="area">
+        <h3>Consulta y orientación familiar</h3>
+        <p>Apoyo a familias para comprender el problema, mejorar la comunicación, establecer límites saludables y coordinar el trabajo con otros profesionales.</p>
+        <span class="tags">Comunicación · Límites</span>
+      </article>
+      <article class="area">
+        <h3>Adolescentes, jóvenes y crianza</h3>
+        <p>Espacio adaptado para adolescentes y jóvenes, con orientación a padres y cuidadores basada en ética y confidencialidad.</p>
+        <span class="tags">Adolescentes · Padres</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="process band" id="proceso">
+  <svg class="maze" viewBox="0 0 800 800" fill="none" aria-hidden="true"><g stroke="#2C3E35" stroke-width="3"><rect x="50" y="50" width="700" height="700"/><rect x="130" y="130" width="540" height="540"/><rect x="210" y="210" width="380" height="380"/><rect x="290" y="290" width="220" height="220"/><path d="M400 50v80M400 210v80M670 400h80M50 400h80"/></g></svg>
+  <div class="inner">
+    <div class="section-head">
+      <span class="label">Cómo trabajo</span>
+      <h2>Un proceso claro, humano y personalizado</h2>
+      <p>Cada persona llega con una historia diferente. Por eso el proceso empieza por comprender el problema antes de proponer un plan.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Comprensión clínica del problema</h3>
+        <p>Analizamos qué está ocurriendo, desde cuándo se presenta, cómo afecta tu vida y qué factores podrían originar o mantener el malestar.</p>
+      </div>
+      <div class="step">
+        <h3>Plan de intervención personalizado</h3>
+        <p>Diseñamos una estrategia terapéutica adaptada a tus necesidades, objetivos, recursos y contexto personal, con seguimiento de los avances.</p>
+      </div>
+      <div class="step">
+        <h3>Herramientas para la vida cotidiana</h3>
+        <p>Desarrollamos recursos emocionales, cognitivos y conductuales que puedas aplicar fuera de la consulta para mantener los avances.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="group band" id="grupo">
+  <div class="inner">
+    <div class="section-head">
+      <span class="label">Grupo Los Altos</span>
+      <h2>Atención integral, del consultorio a la clínica</h2>
+      <p>El Lic. Martínez es fundador de Grupo Los Altos, que reúne atención residencial, ambulatoria y tecnología especializada en salud mental.</p>
+    </div>
+    <div class="group-grid">
+      <article class="org">
+        <span class="label">Residencial</span>
+        <h3>Clínica Los Altos</h3>
+        <p>Atención residencial especializada para trastornos agudos de salud mental y problemas relacionados con el consumo de sustancias, con un modelo multidisciplinario y confidencial.</p>
+        <a class="more" href="https://psicologochristianmartinez.com/Recursos/folleto-grupo-los-altos.pdf" target="_blank" rel="noopener">Ver folleto</a>
+      </article>
+      <article class="org">
+        <span class="label">Ambulatorio</span>
+        <h3>Centro Médico Los Altos</h3>
+        <p>Seguimiento ambulatorio después de un tratamiento residencial, además de evaluación y consulta para condiciones que no requieren internamiento.</p>
+        <a class="more" href="https://psicologochristianmartinez.com/Recursos/folleto-grupo-los-altos.pdf" target="_blank" rel="noopener">Ver folleto</a>
+      </article>
+      <article class="org">
+        <span class="label">Estimulación magnética transcraneal</span>
+        <h3>Sonora TMS Center</h3>
+        <p>Alternativa no invasiva para ciertos trastornos neuropsiquiátricos, especialmente la depresión resistente al tratamiento convencional, con valoración previa.</p>
+        <a class="more" href="https://psicologochristianmartinez.com/Recursos/folleto-sonora-tms-depresion.pdf" target="_blank" rel="noopener">Ver folleto</a>
+      </article>
+    </div>
+    <div class="penasco">
+      <div>
+        <span class="label">En desarrollo</span>
+        <h3>Los Altos Puerto Peñasco</h3>
+      </div>
+      <div style="display:grid;gap:1rem">
+        <p>Proyecto de turismo médico transfronterizo frente al mar, para la atención de salud mental y adicciones de pacientes de Arizona, California y otras regiones de Estados Unidos. Actualmente en etapa de fondeo y captación de inversión.</p>
+        <div class="actions">
+          <a class="btn ghost" href="https://psicologochristianmartinez.com/Recursos/video-los-altos-puerto-penasco.mp4" target="_blank" rel="noopener">Ver video</a>
+          <a class="btn ghost" href="https://psicologochristianmartinez.com/Recursos/los-altos-puerto-penasco-en.pdf" target="_blank" rel="noopener">Presentación (inglés)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews band" aria-label="Opiniones de pacientes">
+  <div class="inner">
+    <span class="label">Opiniones de pacientes</span>
+    <h2>Reseñas verificadas de Google</h2>
+    <p class="pending"><strong>Espacio reservado.</strong> Aquí se mostrarán las reseñas del Perfil de Empresa en Google cuando existan, con la calificación promedio, como en la página de referencia. No se publicarán testimonios inventados.</p>
+  </div>
+</section>
+
+<section class="faq band" id="preguntas">
+  <div class="inner">
+    <div class="intro">
+      <span class="label">Preguntas frecuentes</span>
+      <h2>Respuestas claras para tu primer paso</h2>
+      <p>Si tienes otra duda, escribe por WhatsApp al +52 662 380 0030. Todas las conversaciones son confidenciales.</p>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary>¿Quién es el Lic. Christian Martínez Leyva?</summary>
+        <p>Es psicólogo clínico en Hermosillo, Sonora, con más de 20 años de experiencia en salud mental, adicciones y conductas compulsivas, y fundador de Grupo Los Altos.</p>
+      </details>
+      <details>
+        <summary>¿Cuándo debería acudir a terapia?</summary>
+        <p>Cuando una situación emocional, familiar, laboral o personal comienza a afectar tu bienestar, tus relaciones, tu sueño, tu rendimiento o tu calidad de vida. No es necesario esperar a una crisis para buscar atención.</p>
+      </details>
+      <details>
+        <summary>¿La primera cita es una valoración?</summary>
+        <p>Sí. La primera sesión permite conocer el motivo de consulta, comprender la situación actual, revisar antecedentes relevantes y definir las recomendaciones iniciales.</p>
+      </details>
+      <details>
+        <summary>¿Atiendes problemas de adicciones?</summary>
+        <p>Sí. Cuento con experiencia en el tratamiento psicológico de las adicciones, prevención de recaídas, motivación para el cambio, acompañamiento familiar y manejo de conductas compulsivas.</p>
+      </details>
+      <details>
+        <summary>¿También trabajas con familiares?</summary>
+        <p>Sí. La orientación familiar puede ser especialmente importante ante una crisis emocional, un trastorno de salud mental, consumo de sustancias, conflictos familiares o dificultades para establecer límites.</p>
+      </details>
+      <details>
+        <summary>¿La terapia es confidencial?</summary>
+        <p>Sí. La atención se brinda dentro de un marco profesional, ético y confidencial. En la primera sesión se explican los alcances y límites legales y éticos de la confidencialidad.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto dura el tratamiento?</summary>
+        <p>La duración depende del motivo de consulta, los objetivos establecidos, la evolución del paciente y la constancia en el proceso. Después de la valoración inicial se propone un plan de trabajo y se revisan periódicamente los avances.</p>
+      </details>
+      <details>
+        <summary>¿Dónde atiende y cómo agendo una cita?</summary>
+        <p>El Lic. Christian Martínez Leyva atiende de manera presencial en Hermosillo, Sonora, de lunes a viernes con cita previa. Puedes agendar por WhatsApp al +52 662 380 0030 o escribir a licmartinezleyva@gmail.com.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="contact band" id="contacto">
+  <div class="inner">
+    <div class="info">
+      <span class="label">Contacto</span>
+      <h2>Da el primer paso hoy</h2>
+      <p style="color:var(--muted)">Agenda tu valoración inicial o escribe si tienes preguntas. Todas las conversaciones son confidenciales.</p>
+      <dl>
+        <div><dt>Teléfono / WhatsApp</dt><dd>+52 662 380 0030</dd></div>
+        <div><dt>Correo electrónico</dt><dd>licmartinezleyva@gmail.com</dd></div>
+        <div><dt>Ubicación</dt><dd class="plain">Hermosillo, Sonora, México</dd></div>
+        <div><dt>Horario</dt><dd class="plain">Lunes a viernes · Previa cita</dd></div>
+      </dl>
+    </div>
+    <form id="contactForm" novalidate>
+      <h3>Solicitar valoración inicial</h3>
+      <div class="row">
+        <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" autocomplete="given-name" required></div>
+        <div class="field"><label for="apellido">Apellido</label><input id="apellido" name="apellido" autocomplete="family-name" required></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="telefono">Teléfono / WhatsApp</label><input id="telefono" name="telefono" type="tel" autocomplete="tel" required></div>
+      </div>
+      <div class="field">
+        <label for="motivo">Motivo de consulta</label>
+        <select id="motivo" name="motivo" required>
+          <option value="">Selecciona una opción</option>
+          <option>Adicciones o consumo de sustancias</option>
+          <option>Ansiedad o estrés</option>
+          <option>Depresión</option>
+          <option>Proceso de duelo</option>
+          <option>Intervención en crisis</option>
+          <option>Orientación familiar</option>
+          <option>Atención a adolescentes o jóvenes</option>
+          <option>Bienestar emocional general</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div class="field"><label for="mensaje">Mensaje (opcional)</label><textarea id="mensaje" name="mensaje"></textarea></div>
+      <p class="form-error" id="formError" role="alert" hidden></p>
+      <button class="btn" type="submit">Enviar solicitud por WhatsApp</button>
+      <a class="btn" id="waLink" href="https://wa.me/526623800030" target="_blank" rel="noopener" hidden>Abrir WhatsApp con mi solicitud</a>
+      <p class="form-note">Tu solicitud se abre en WhatsApp para que la envíes desde tu teléfono.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="band">
+  <div class="inner">
+    <img src="img/LogotipoVertical.png" width="804" height="378" alt="Logotipo Christian Martínez Leyva" loading="lazy">
+    <address>
+      <strong>Lic. Christian Martínez Leyva · Psicólogo clínico</strong><br>
+      Hermosillo, Sonora, México · +52 662 380 0030 · licmartinezleyva@gmail.com<br>
+      © 2026 · Servicio confidencial y profesional
+    </address>
+  </div>
+</footer>
+
+<div class="book-bar">
+  <a href="#contacto">Agendar valoración</a>
+  <a href="https://wa.me/526623800030" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+(function () {
+  var btn = document.getElementById('menuBtn');
+  var menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', function () {
+    menu.hidden = !menu.hidden;
+    btn.setAttribute('aria-expanded', String(!menu.hidden));
+  });
+  menu.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') { menu.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+  });
+
+  var form = document.getElementById('contactForm');
+  var error = document.getElementById('formError');
+  var wa = document.getElementById('waLink');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    error.hidden = true;
+    var v = function (id) { return document.getElementById(id).value.trim(); };
+    if (!v('nombre') || !v('apellido') || !v('email') || !v('telefono') || !v('motivo')) {
+      error.textContent = 'Completa nombre, apellido, correo, teléfono y motivo de consulta.';
+      error.hidden = false; return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('email'))) {
+      error.textContent = 'Revisa el correo electrónico; parece incompleto.';
+      error.hidden = false; return;
+    }
+    var msg = '*Nueva solicitud de consulta*\n\n*Nombre:* ' + v('nombre') + ' ' + v('apellido') +
+      '\n*Correo electrónico:* ' + v('email') + '\n*Teléfono / WhatsApp:* ' + v('telefono') +
+      '\n*Motivo de consulta:* ' + v('motivo') + (v('mensaje') ? '\n*Mensaje adicional:* ' + v('mensaje') : '');
+    wa.href = 'https://wa.me/526623800030?text=' + encodeURIComponent(msg);
+    wa.hidden = false;
+    wa.focus();
+  });
+})();
+</script>
+
+</html>
